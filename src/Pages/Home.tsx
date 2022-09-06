@@ -1,7 +1,7 @@
-import {Text, Box,Image, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Input, useDisclosure, Center, SimpleGrid, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, HStack } from '@chakra-ui/react';
+import {Box,Image, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerOverlay, useDisclosure, Accordion } from '@chakra-ui/react';
 import * as React from 'react';
-import { BsBorderOuter } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import AccordianLineItem from '../Components/Accordian/AccordianLineItem';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 export interface IAppProps {
   onClick: () => void
@@ -9,19 +9,12 @@ export interface IAppProps {
 
 export function Home (props: IAppProps) {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = React.useRef()
-    const [yourMenu, setyourMenuState] = React.useState(false);
-
-    let colorShifter = (boolvar : boolean) => {
-      setyourMenuState(!boolvar)
-      console.log(yourMenu)
-    }
 
   return (
     <div>
-        <Button colorScheme='teal' onClick={onOpen}>
-        Main Menu
-        </Button>
+      <div onClick={onOpen}>
+        <HamburgerIcon w={12} h={12}/>
+      </div>
       <Drawer
         isOpen={isOpen}
         placement='left'
@@ -36,31 +29,28 @@ export function Home (props: IAppProps) {
 
           <DrawerBody>
           <Accordion allowMultiple>
-          <AccordionItem>
-            <h2>
-              <div onClick={ () => colorShifter(yourMenu) }>
-              <AccordionButton _expanded={{ bg: '#5651f4', color: 'white' }}>
-                <Box flex='1' textAlign='left'>
-                { yourMenu ?
-                  <HStack spacing='10px'>
-                  <BsBorderOuter color = "white"/>
-                    <Text color = "white">Your Menu</Text>
-                  </HStack> 
-                  :
-                  <HStack spacing='10px'>
-                  <BsBorderOuter color = "black"/>
-                    <Text color = "black">Your Menu</Text>
-                  </HStack> 
-                }   
-                </Box>
-              </AccordionButton>
-              </div>
-            </h2>
-            <Link to={'/test'}>
-              <AccordionPanel>
-              </AccordionPanel>
-            </Link>
-          </AccordionItem>
+          <AccordianLineItem title = "Your Menu" subtitleList = {[
+            {title: "This is a test", id: "1"},
+            {title: "b", id: "2"},
+            {title: "c", id: "3"}
+          ]} />
+          <AccordianLineItem title = "Venu Details" subtitleList = {[
+            {title: "a", id: "4"},
+            {title: "b", id: "5"}
+          ]}/>
+          <AccordianLineItem title = "Orders" subtitleList = {[
+           {title: "Live Orders", id: "6"},
+           {title: "Orders & Refunds", id: "7"},
+           {title: "Turn On/Off", id: "8"},
+           {title: "Dine-In Settings", id: "9"},
+           {title: "Pick-Up Settings", id: "10"},
+           {title: "Ordering Windows", id: "11"},
+           {title: "Card Surcharge", id: "12"},
+           {title: "Tipping", id: "13"},
+           {title: "SMS Notifications", id: "14"},
+            ]}/>
+          <AccordianLineItem title = "Marketing" subtitleList = {[
+          ]} />
         </Accordion>
           </DrawerBody>
 
@@ -71,3 +61,16 @@ export function Home (props: IAppProps) {
     </div>
   );
 }
+
+
+/*
+ "Live Orders",
+  "Orders & Refunds", 
+  "Turn On/Off", 
+  "Dine-In Settings", 
+  "Pick-Up Settings", 
+  "Ordering Windows", 
+  "Card Surcharge",
+  "Tipping",
+  "SMS Notifications"
+*/
