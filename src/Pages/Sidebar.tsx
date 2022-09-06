@@ -44,10 +44,11 @@ export function Sidebar (props: IAppProps) {
            {title: "Turn On/Off", id: "8"},
            {title: "Dine-In Settings", id: "9"},
            {title: "Pick-Up Settings", id: "10"},
-           {title: "Ordering Windows", id: "11"},
-           {title: "Card Surcharge", id: "12"},
-           {title: "Tipping", id: "13"},
-           {title: "SMS Notifications", id: "14"},
+           {title: "Delivery Settings", id: "11"},
+           {title: "Ordering Windows", id: "12"},
+           {title: "Card Surcharge", id: "13"},
+           {title: "Tipping", id: "14"},
+           {title: "SMS Notifications", id: "15"},
             ]}/>
           <AccordianLineItem title = "Marketing" subtitleList = {[
           ]} />
