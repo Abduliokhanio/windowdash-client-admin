@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Home } from './Pages/Home';
 import { ChakraProvider } from '@chakra-ui/react'
+import Home from './Pages/Home';
 
 function App() {
   return (
@@ -10,9 +10,7 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Routes>
-            <Route path="/" element={ <Home onClick={function (): void {
-              throw new Error('Function not implemented.');
-            } }/> } />
+            <Route path="/" element={ <Home />} />
           </Routes>
         </div>
       </BrowserRouter>

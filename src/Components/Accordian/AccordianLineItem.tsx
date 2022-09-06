@@ -37,9 +37,9 @@ export default function AccordianLineItem (props: IAppProps) {
         }
     }
 
-    let stringSpaceRemover = (val : string) => {
-        let concatVal = val.split(" ").join("")
-        return concatVal
+    let stringSpaceRemover = (word : string) => {
+        let result = word.split("").filter(e => e!== " " && e !== "/" && e !== "-").join("")
+        return result
     }
 
     
