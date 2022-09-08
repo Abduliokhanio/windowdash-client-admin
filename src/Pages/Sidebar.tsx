@@ -1,4 +1,4 @@
-import {Box,Image, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerOverlay, useDisclosure, Accordion } from '@chakra-ui/react';
+import {Box,Image, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerOverlay, useDisclosure, Accordion, Center } from '@chakra-ui/react';
 import * as React from 'react';
 import AccordianLineItem from '../Components/Accordian/AccordianLineItem';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -23,8 +23,8 @@ export function Sidebar (props: IAppProps) {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-            <Box pb="8">
-                <Image boxSize="10em" src="https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_100,q_80,fl_lossy,dpr_2.0,c_fit,f_auto,h_100/vfyavti06gzv9mlsl2ra" />
+            <Box pb="8" margin="auto" paddingTop={"2.5em"}>
+                  <Image boxSize="10em" src="https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_100,q_80,fl_lossy,dpr_2.0,c_fit,f_auto,h_100/vfyavti06gzv9mlsl2ra" />
             </Box>
 
           <DrawerBody>

@@ -1,4 +1,4 @@
-import { Center, Text} from '@chakra-ui/react';
+import { Button, ButtonGroup, Center, Spacer, Text} from '@chakra-ui/react';
 import * as React from 'react';
 import WdaDivider from '../Components/Tools/WdaDivider';
 import WdaForm from '../Components/Tools/WdaForm';
@@ -33,6 +33,14 @@ export default function DeliverySettings (props: IAppProps) {
           <WdaForm formTitle = {"Minimum Order Value For Free Delivery (In Cents)"} formType = "money"/>
           <WdaForm formTitle = {"Delivery Fee (In Cents)"} formType = "money"/>
           <WdaForm formTitle = {"Always Charge Delivery Fee"} formType = "switch"/>
+
+          <div style={{paddingTop: "1.5em", paddingBottom: "1.5em" , maxWidth: "80%" , marginRight: "auto", marginLeft: "auto"}}>
+            <ButtonGroup>
+              <Button backgroundColor={"blue.500"} color={"white"} size='lg' width='6em'>Save</Button>
+              <Spacer/>
+              <Button backgroundColor={"red.500"} color={"white"} size='lg' width='6em'>Cancel</Button>
+            </ButtonGroup>
+          </div>
         
     </div>
   );
