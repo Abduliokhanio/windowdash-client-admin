@@ -14,9 +14,7 @@ export default function WdaForm (props: IAppProps) {
 
     if(props.formType === "money")  {
         formState = <div className= {props.formTitle} >
-                      <Center>
                         <Text fontSize='lg'>{props.formTitle}</Text>
-                      </Center>
 
                       <Center>
                         <InputGroup>
@@ -26,7 +24,7 @@ export default function WdaForm (props: IAppProps) {
                             fontSize='1.2em'
                             children='$'
                           />
-                          <Input placeholder='Enter amount' focusBorderColor='lime'/>
+                          <Input variant='filled' placeholder='Enter amount' focusBorderColor='lime'/>
                           <InputRightElement children={''} />
                         </InputGroup>
                       </Center>
@@ -40,10 +38,7 @@ export default function WdaForm (props: IAppProps) {
       })
 
         formState = <div className= {props.formTitle}>
-                      <Center>
-                        <Text fontSize='lg'>{props.formTitle}</Text>
-                      </Center>
-
+                      <Text fontSize='lg'>{props.formTitle}</Text>
                       <Center>
                         <InputGroup>
                           <InputLeftElement
@@ -53,7 +48,7 @@ export default function WdaForm (props: IAppProps) {
                             children=''
                           />
                           <FormControl>
-                            <Select placeholder={`${props.formPlaceholder}`}>
+                            <Select placeholder={`${props.formPlaceholder}`} variant='filled'>
                               {optsArr}
                             </Select>
                           </FormControl>
@@ -67,9 +62,7 @@ export default function WdaForm (props: IAppProps) {
       const placeHolderVal = props.formPlaceholder ? props.formPlaceholder : ""
 
         formState = <div className= {props.formTitle}>
-                      <Center>
                         <Text fontSize='lg'>{props.formTitle}</Text>
-                      </Center>
 
                       <Center>
                         <InputGroup>
@@ -79,7 +72,7 @@ export default function WdaForm (props: IAppProps) {
                             fontSize='1.2em'
                             children=''
                           />
-                          <Input placeholder={`${placeHolderVal}`} focusBorderColor='lime'/>
+                          <Input placeholder={`${placeHolderVal}`} focusBorderColor='lime' variant='filled'/>
                           <InputRightElement children={''} />
                         </InputGroup>
                       </Center>
@@ -96,7 +89,7 @@ export default function WdaForm (props: IAppProps) {
     }
 
   return (
-    <div style={{paddingTop: "1em"}}>
+    <div style={{paddingTop: "1.5em" , maxWidth: "80%" , marginRight: "auto", marginLeft: "auto"}}>
     {formState}
     </div>
   );
