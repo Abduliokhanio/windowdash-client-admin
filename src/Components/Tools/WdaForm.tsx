@@ -1,3 +1,4 @@
+import { SearchIcon } from '@chakra-ui/icons';
 import { Center, FormControl, Input, InputGroup, InputLeftElement, InputRightElement, Select, Stack, Switch, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
@@ -30,6 +31,24 @@ export default function WdaForm (props: IAppProps) {
                       </Center>
                     </div>
     }
+
+    if(props.formType === "search")  {
+      formState = <div className= {props.formTitle} >
+                      <Text fontSize='lg'>{props.formTitle}</Text>
+
+                    <Center>
+                      <InputGroup>
+                        <InputLeftElement
+                          pointerEvents='none'
+                          color='gray.300'
+                          fontSize='1.2em'
+                          children={<SearchIcon/>}
+                        />
+                        <Input variant='filled' placeholder='Enter amount' focusBorderColor='lime'/>
+                      </InputGroup>
+                    </Center>
+                  </div>
+  }
 
     if(props.formType === "dropdown")  {
 

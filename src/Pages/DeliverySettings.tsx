@@ -1,8 +1,10 @@
 import { Button, ButtonGroup, Center, Flex, Spacer, Text} from '@chakra-ui/react';
 import * as React from 'react';
+import Header from '../Components/Header/Header';
 import WdaDivider from '../Components/Tools/WdaDivider';
 import WdaForm from '../Components/Tools/WdaForm';
 import { Sidebar } from './Sidebar';
+
 
 export interface IAppProps {
 }
@@ -10,24 +12,7 @@ export interface IAppProps {
 export default function DeliverySettings (props: IAppProps) {
   return (
     <div>
-      
-      <Flex>
-        <Center>
-        <Sidebar onClick={function (): void {
-        throw new Error('Function not implemented.');
-        } }/></Center>
-         <div style={{margin: "auto"}}>
-          <Center>
-            <Text as='b' fontSize='5xl'>Nu's Wood Fire Grill</Text>
-          </Center>
-          </div>
-
-          </Flex>
-          <Center>
-            <Text as='b' fontSize='4xl'>Delivery Settings</Text>
-          </Center>
-
-          <WdaDivider maxWidth = "80%"/>         
+          <Header subtitle={'Delivery Settings'}></Header>       
         
           <WdaForm formTitle = {"Minimum Delivery Order Value (In Cents)"} formType = "money"/>
           <WdaForm formTitle = {"Delivery Postcodes"} formType = "dropdown" formPlaceholder = "Select zipcode" dropDownCollection = {['1','2','3','4']}/>

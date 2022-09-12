@@ -1,6 +1,8 @@
-import { Center, Flex } from '@chakra-ui/react';
+import { Box, Center, Flex, Spacer, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Sidebar } from './Sidebar';
+import Headers from '../Components/Header/Header'
+import WdaForm from '../Components/Tools/WdaForm';
 
 export interface IAppProps {
 }
@@ -8,18 +10,8 @@ export interface IAppProps {
 export default function Menu (props: IAppProps) {
   return (
     <div>
-        <Flex>
-        <Sidebar onClick={function (): void {
-              throw new Error('Function not implemented.');
-          } }/>
-        
-        <Center>
-            <div style={{margin: "auto"}}>   
-                <h1>Menu</h1> 
-            </div>
-        </Center>
-        </Flex>
-        
+        <Headers subtitle = "Menu"/>
+        <WdaForm formTitle = {"Minimum Delivery Order Value (In Cents)"} formType = "search"/>
     </div>
   );
 }
