@@ -21,8 +21,8 @@ export default function Menu (props: IAppProps) {
         <MenuCategory title = "Drinks" dineOptions = {dopts}img = {img2} location = "Bar"/>
         <MenuCategory title = "Food (Pickup/Delivery)" dineOptions = {dopts}img = {img3} location = "Bar" />
         
-        <div style = {{paddingLeft:"10%"}}>
-            <HStack>
+        <div style = {{paddingLeft:"10%", paddingTop: "1em"}}>
+            <HStack paddingLeft={.5}>
                 <Box  bg={"White"} borderColor='black' borderWidth='1px' >
                     <Center padding={1}>
                         <AddIcon/>
