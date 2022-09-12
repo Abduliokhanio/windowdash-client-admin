@@ -4,17 +4,20 @@ import { Flex, Text,Image, Box, HStack, Spacer, VStack } from '@chakra-ui/react'
 
 export interface IAppProps {
     title: string,
-    subtitle: string,
+    dineOptions : string[]
     img : {
         src: string,
         alt: string
     }
-    dineOptions : string[]
+    
 }
 
 export default function MenuCategory (props: IAppProps) {
+
+    let printedMapOptions = props.dineOptions.join(" | ")
+
   return (
-    <div>
+    <div style={{paddingTop: "1.5em" , maxWidth: "80%" , marginRight: "auto", marginLeft: "auto"}}>
     <Flex>
         <Box>
             <HStack>
@@ -23,11 +26,13 @@ export default function MenuCategory (props: IAppProps) {
                 </Box>
                 <Box>
                     <Text as = "u">
-                    <Text as= "b" fontSize='xl'>{props.title}</Text>
+                        <Text as= "b" fontSize='xl'>{props.title}</Text>
                     </Text>
-                    <Text >{props.subtitle}</Text>
                 </Box>
             </HStack>
+            <Text as = "b">
+                 {printedMapOptions}
+             </Text>
         </Box>
         <Spacer />
         <Box>
