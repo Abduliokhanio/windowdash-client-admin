@@ -3,7 +3,7 @@ import { Center, FormControl, Input, InputGroup, InputLeftElement, InputRightEle
 import * as React from 'react';
 
 export interface IAppProps {
-    formTitle: string
+    formTitle?: string
     formType: string
     formPlaceholder?: string | undefined
     dropDownCollection?: any | undefined
@@ -32,10 +32,8 @@ export default function WdaForm (props: IAppProps) {
                     </div>
     }
 
-    if(props.formType === "search")  {
-      formState = <div className= {props.formTitle} >
-                      <Text fontSize='lg'>{props.formTitle}</Text>
-
+    if(props.formType === "search")  { 
+      formState = <div className= {"searchBox"} >
                     <Center>
                       <InputGroup>
                         <InputLeftElement
@@ -44,7 +42,7 @@ export default function WdaForm (props: IAppProps) {
                           fontSize='1.2em'
                           children={<SearchIcon/>}
                         />
-                        <Input variant='filled' placeholder='Enter amount' focusBorderColor='lime'/>
+                        <Input variant='filled' placeholder={props.formPlaceholder} focusBorderColor='lime'/>
                       </InputGroup>
                     </Center>
                   </div>

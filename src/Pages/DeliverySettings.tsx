@@ -1,11 +1,8 @@
-import { Button, ButtonGroup, Center, Flex, Spacer, Text} from '@chakra-ui/react';
+import { Button, ButtonGroup, Spacer} from '@chakra-ui/react';
 import * as React from 'react';
 import Header from '../Components/Header/Header';
 import WdaDivider from '../Components/Tools/WdaDivider';
 import WdaForm from '../Components/Tools/WdaForm';
-import { Sidebar } from './Sidebar';
-
-
 export interface IAppProps {
 }
 

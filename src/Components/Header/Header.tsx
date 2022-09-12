@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Spacer, Text } from '@chakra-ui/react';
+import { Box, Flex, Spacer, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Sidebar } from "../../Pages/Sidebar";
 import WdaDivider from '../Tools/WdaDivider';
