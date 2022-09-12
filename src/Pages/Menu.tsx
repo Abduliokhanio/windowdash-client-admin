@@ -1,5 +1,7 @@
+import { AddIcon } from '@chakra-ui/icons';
+import { Box, Center, HStack, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import Headers from '../Components/Header/Header'
+import Header from '../Components/Header/Header'
 import MenuCategory from '../Components/MenuComponents/MenuCategory';
 import WdaForm from '../Components/Tools/WdaForm';
 
@@ -13,11 +15,27 @@ export default function Menu (props: IAppProps) {
     let dopts : string[] = ["Delivery","Pick-up", "Dine-in"]
   return (
     <div>
-        <Headers subtitle = "Menu"/>
+        <Header subtitle = "Menu"/>
         <WdaForm formTitle = {""} formType = "search" formPlaceholder='Search All Items'/>
-        <MenuCategory title = "Lunch" dineOptions = {dopts}img = {img1} />
-        <MenuCategory title = "Drinks" dineOptions = {dopts}img = {img2} />
-        <MenuCategory title = "Food (Pickup/Delivery)" dineOptions = {dopts}img = {img3} />
+        <MenuCategory title = "Lunch" dineOptions = {dopts}img = {img1} location = "Kitchen" />
+        <MenuCategory title = "Drinks" dineOptions = {dopts}img = {img2} location = "Bar"/>
+        <MenuCategory title = "Food (Pickup/Delivery)" dineOptions = {dopts}img = {img3} location = "Bar" />
+        
+        <div style = {{paddingLeft:"10%"}}>
+            <HStack>
+                <Box  bg={"White"} borderColor='black' borderWidth='1px' >
+                    <Center padding={1}>
+                        <AddIcon/>
+                    </Center>
+                </Box>
+                <Box>
+                    <Center>
+                        <Text as = "b">Create New Category</Text>
+                    </Center>
+                </Box>
+            </HStack>
+        </div>
+        
     </div>
   );
 }

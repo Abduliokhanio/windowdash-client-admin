@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Flex, Text,Image, Box, HStack, Spacer, VStack } from '@chakra-ui/react';
+import { Flex, Text,Image, Box, HStack, Spacer, Button, Center, VStack } from '@chakra-ui/react';
+import { TimeIcon } from '@chakra-ui/icons';
 
 
 export interface IAppProps {
@@ -9,7 +10,7 @@ export interface IAppProps {
         src: string,
         alt: string
     }
-    
+    location : string
 }
 
 export default function MenuCategory (props: IAppProps) {
@@ -28,20 +29,38 @@ export default function MenuCategory (props: IAppProps) {
                     <Text as = "u">
                         <Text as= "b" fontSize='xl'>{props.title}</Text>
                     </Text>
-                </Box>
-            </HStack>
-            <Text as = "b">
+                    <Text fontSize='xs'>
                  {printedMapOptions}
              </Text>
+                </Box>
+
+            </HStack>
+            
         </Box>
         <Spacer />
         <Box>
-            <VStack>
-                    <Box>
-                        <p>Some shit over here</p>
-                    </Box>
-            </VStack>
-            
+            <HStack spacing='0px'>
+                <Box>
+                    <Button bg={'#edf2f6'} color={'black'} size='xs' borderColor='black' borderWidth='1px' disabled>
+                        {props.location}
+                    </Button>
+                </Box>
+                <Spacer p={1}/>
+                <Box  bg={"White"} borderColor='black' borderWidth='1px' height={8} width={8} >
+                    <VStack>
+                        <Spacer/>
+                            <Center>
+                                <TimeIcon/>
+                            </Center>
+                        <Spacer/>
+                    </VStack>
+                </Box>
+                <Box bg={"Black"} height={8} px ={4}>
+                    <Center w={4} h={8} bg='black' color='white'>
+                    <Text as = "b">EDIT</Text>
+                </Center>
+                </Box>
+            </HStack>
         </Box>
     </Flex> 
     </div>
