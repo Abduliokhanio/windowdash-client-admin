@@ -12,6 +12,7 @@ export function Sidebar (props: IAppProps) {
 
   return (
     <div>
+      <Box p={"3.5"}>
       <div onClick={onOpen}>
         <HamburgerIcon w={12} h={12}/>
       </div>
@@ -30,7 +31,7 @@ export function Sidebar (props: IAppProps) {
           <DrawerBody>
           <Accordion allowMultiple>
           <AccordianLineItem title = "Your Menu" subtitleList = {[
-            {title: "This is a test", id: "1"},
+            {title: "Menu", id: "1"},
             {title: "b", id: "2"},
             {title: "c", id: "3"}
           ]} />
@@ -59,19 +60,7 @@ export function Sidebar (props: IAppProps) {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
+      </Box>
     </div>
   );
 }
-
-
-/*
- "Live Orders",
-  "Orders & Refunds", 
-  "Turn On/Off", 
-  "Dine-In Settings", 
-  "Pick-Up Settings", 
-  "Ordering Windows", 
-  "Card Surcharge",
-  "Tipping",
-  "SMS Notifications"
-*/

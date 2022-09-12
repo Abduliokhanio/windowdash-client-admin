@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Center, Spacer, Text} from '@chakra-ui/react';
+import { Button, ButtonGroup, Center, Flex, Spacer, Text} from '@chakra-ui/react';
 import * as React from 'react';
 import WdaDivider from '../Components/Tools/WdaDivider';
 import WdaForm from '../Components/Tools/WdaForm';
@@ -10,14 +10,19 @@ export interface IAppProps {
 export default function DeliverySettings (props: IAppProps) {
   return (
     <div>
-      <Sidebar onClick={function (): void {
-      throw new Error('Function not implemented.');
-      } }/>
       
+      <Flex>
+        <Center>
+        <Sidebar onClick={function (): void {
+        throw new Error('Function not implemented.');
+        } }/></Center>
+         <div style={{margin: "auto"}}>
           <Center>
             <Text as='b' fontSize='5xl'>Nu's Wood Fire Grill</Text>
           </Center>
+          </div>
 
+          </Flex>
           <Center>
             <Text as='b' fontSize='4xl'>Delivery Settings</Text>
           </Center>
@@ -41,7 +46,7 @@ export default function DeliverySettings (props: IAppProps) {
               <Button backgroundColor={"red.500"} color={"white"} size='lg' width='6em'>Cancel</Button>
             </ButtonGroup>
           </div>
-        
+      
     </div>
   );
 }
