@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Home from './Pages/Home';
 import DeliverySettings from './Pages/DeliverySettings';
 import Menu from './Pages/Menu';
+import CategoryEditPg from './Pages/CategoryEditPg';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             <Route path="/DeliverySettings" element={ <DeliverySettings />} />
             <Route path="/Menu" element={ <Menu />} />
 
-            <Route path="Menu/Category/:id/edit" element={ <Menu />} />
+            <Route path="Menu/Category/:id/edit" element={ <CategoryEditPg />} />
           </Routes>
         </div>
       </BrowserRouter>
