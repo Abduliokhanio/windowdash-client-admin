@@ -70,7 +70,7 @@ export default function MenuCategory (props: IAppProps) {
                 </Box>
                 <Spacer p={1}/>
                 {timeIcon}
-                <Link to={`category/${props.id}/edit`}>
+                <Link to={`Category/${props.id}/edit`}>
                 <Box bg={"Black"} height={8} px ={4}>
                     <Center w={4} h={8} bg='black' color='white'>
                     <Text as = "b">EDIT</Text>

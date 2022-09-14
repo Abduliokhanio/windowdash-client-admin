@@ -16,6 +16,8 @@ function App() {
 
             <Route path="/DeliverySettings" element={ <DeliverySettings />} />
             <Route path="/Menu" element={ <Menu />} />
+
+            <Route path="Menu/Category/:id/edit" element={ <Menu />} />
           </Routes>
         </div>
       </BrowserRouter>
