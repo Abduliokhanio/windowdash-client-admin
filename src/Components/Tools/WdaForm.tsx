@@ -1,6 +1,8 @@
-import { SearchIcon } from '@chakra-ui/icons';
-import { Center, FormControl, Input, InputGroup, InputLeftElement, InputRightElement, Select, Stack, Switch, Text } from '@chakra-ui/react';
+import { SearchIcon, ViewIcon } from '@chakra-ui/icons';
+import { Box, Center, FormControl, HStack, Input, InputGroup, InputLeftElement, InputRightElement, Select, Stack, Switch, Text } from '@chakra-ui/react';
 import * as React from 'react';
+import { RiShoppingCart2Line } from 'react-icons/ri';
+import { GiPointySword } from 'react-icons/gi';
 
 export interface IAppProps {
     formTitle?: string
@@ -32,7 +34,7 @@ export default function WdaForm (props: IAppProps) {
                     </div>
     }
 
-    if(props.formType === "search")  { 
+    if(props.formType === "search-default")  { 
       formState = <div className= {"searchBox"} >
                     <Center>
                       <InputGroup>
@@ -47,6 +49,42 @@ export default function WdaForm (props: IAppProps) {
                     </Center>
                   </div>
   }
+
+  if(props.formType === "search-category-edit-pg")  { 
+    formState = <div className= {"searchBox"} >
+                  <HStack>
+                    <Box w={"100%"}>
+                    <InputGroup>
+                      <InputLeftElement
+                        pointerEvents='none'
+                        color='gray.300'
+                        fontSize='1.2em'
+                        children={<SearchIcon/>}
+                      />
+                      <Input variant='filled' placeholder={props.formPlaceholder} focusBorderColor='lime'/>
+                    </InputGroup>
+                    </Box>
+                    <Box>
+                      <HStack>
+                        <RiShoppingCart2Line/>
+                        <Text as = 'b'> POS</Text>
+                      </HStack>
+                    </Box>
+                    <Box bg={"black"} color="White" p={2}>
+                      <HStack>
+                        <ViewIcon/>
+                        <Text>Availability</Text>
+                      </HStack>
+                    </Box>
+                    <Box bg={"white"} p={2}>
+                      <HStack>
+                        <GiPointySword/>
+                        <Text>Position</Text>
+                      </HStack>
+                    </Box>
+                  </HStack>
+                </div>
+}
 
     if(props.formType === "dropdown")  {
 

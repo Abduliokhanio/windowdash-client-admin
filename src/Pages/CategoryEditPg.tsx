@@ -3,6 +3,8 @@ import Header from '../Components/Header/Header';
 import { Box, Center, HStack, Spacer, Stack, Text, VStack } from '@chakra-ui/react';
 import { ChevronDownIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
+import WdaDivider from '../Components/Tools/WdaDivider';
+import WdaForm from '../Components/Tools/WdaForm';
 
 export interface IAppProps {
 }
@@ -44,6 +46,7 @@ export default function CategoryEditPg (props: IAppProps) {
                     </HStack>
             </VStack>
         </div>
+        <WdaForm formType='search-category-edit-pg' formPlaceholder={`Search ${catTitle}`}></WdaForm>
 
     </div>
   );
