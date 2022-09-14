@@ -11,11 +11,32 @@ export interface IAppProps {
         alt: string
     }
     location : string
+    status: boolean
 }
 
 export default function MenuCategory (props: IAppProps) {
 
     let printedMapOptions = props.dineOptions.join(" | ")
+
+    let timeIcon = props.status ? <Box  bg={"White"} borderColor='black' borderWidth='1px' height={8} width={8} >
+                                        <VStack>
+                                            <Spacer/>
+                                                <Center>
+                                                    <TimeIcon/>
+                                                </Center>
+                                            <Spacer/>
+                                        </VStack>
+                                    </Box> :
+                                    <Box  bg={"Red"} color = {"white"} height={8} width={8} >
+                                    <VStack>
+                                        <Spacer/>
+                                            <Center>
+                                                <TimeIcon/>
+                                            </Center>
+                                        <Spacer/>
+                                    </VStack>
+                                </Box>
+
 
   return (
     <div style={{paddingTop: "1.5em" , maxWidth: "80%" , marginRight: "auto", marginLeft: "auto"}}>
@@ -46,15 +67,7 @@ export default function MenuCategory (props: IAppProps) {
                     </Button>
                 </Box>
                 <Spacer p={1}/>
-                <Box  bg={"White"} borderColor='black' borderWidth='1px' height={8} width={8} >
-                    <VStack>
-                        <Spacer/>
-                            <Center>
-                                <TimeIcon/>
-                            </Center>
-                        <Spacer/>
-                    </VStack>
-                </Box>
+                {timeIcon}
                 <Box bg={"Black"} height={8} px ={4}>
                     <Center w={4} h={8} bg='black' color='white'>
                     <Text as = "b">EDIT</Text>
