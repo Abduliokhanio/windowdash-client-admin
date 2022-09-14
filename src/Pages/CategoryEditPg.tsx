@@ -8,6 +8,9 @@ export interface IAppProps {
 }
 
 export default function CategoryEditPg (props: IAppProps) {
+
+    let catTitle = "Breakfast ('Till 11:00 AM)"
+
   return (
     <div>
         <Header subtitle = "Menu"/>
@@ -33,7 +36,10 @@ export default function CategoryEditPg (props: IAppProps) {
                             </Center>
                         </Box>
                         <Box>
-                            <Text>Back to category</Text>
+                            <HStack>
+                                <Text>{`Viewing category | `}</Text>
+                                <Text as="b">{catTitle}</Text>
+                            </HStack>
                         </Box>
                     </HStack>
             </VStack>
