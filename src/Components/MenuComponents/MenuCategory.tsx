@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { Flex, Text,Image, Box, HStack, Spacer, Button, Center, VStack } from '@chakra-ui/react';
 import { TimeIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
 
 
 export interface IAppProps {
+    id: number,
     title: string,
     dineOptions : string[]
     img : {
@@ -68,11 +70,13 @@ export default function MenuCategory (props: IAppProps) {
                 </Box>
                 <Spacer p={1}/>
                 {timeIcon}
+                <Link to={`category/${props.id}/edit`}>
                 <Box bg={"Black"} height={8} px ={4}>
                     <Center w={4} h={8} bg='black' color='white'>
                     <Text as = "b">EDIT</Text>
                 </Center>
                 </Box>
+                </Link>
             </HStack>
         </Box>
     </Flex> 

@@ -17,10 +17,10 @@ export default function Menu (props: IAppProps) {
     <div>
         <Header subtitle = "Menu"/>
         <WdaForm formTitle = {""} formType = "search" formPlaceholder='Search All Items'/>
-        <MenuCategory title = "Lunch" dineOptions = {dopts}img = {img1} location = "Kitchen" status = {true} />
-        <MenuCategory title = "Drinks" dineOptions = {dopts}img = {img2} location = "Bar"  status = {true} />
-        <MenuCategory title = "Food (Pickup/Delivery)" dineOptions = {dopts}img = {img3} location = "Bar"  status = {true} />
-        <MenuCategory title = "Breakfast ('Till 11:00 AM)" dineOptions = {dopts}img = {img3} location = "Kitchen"  status = {false}/>
+        <MenuCategory id = {1} title = "Lunch" dineOptions = {dopts}img = {img1} location = "Kitchen" status = {true} />
+        <MenuCategory id = {2} title = "Drinks" dineOptions = {dopts}img = {img2} location = "Bar"  status = {true} />
+        <MenuCategory id = {3} title = "Food (Pickup/Delivery)" dineOptions = {dopts}img = {img3} location = "Bar"  status = {true} />
+        <MenuCategory id = {4} title = "Breakfast ('Till 11:00 AM)" dineOptions = {dopts}img = {img3} location = "Kitchen"  status = {false}/>
 
         
         <div style = {{paddingLeft:"10%", paddingTop: "1em"}}>
