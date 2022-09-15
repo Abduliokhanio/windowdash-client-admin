@@ -15,6 +15,20 @@ export default function WdaForm (props: IAppProps) {
 
     let formState
 
+    let [searchCategoryEditPgPosButtonState, setSearchCategoryEditPgPosButtonState] = React.useState(false);
+    let [searchCategoryEditPgAvailabilityButtonState, setSearchCategoryEditPgAvailabilityButtonState] = React.useState(false);
+    let [searchCategoryEditPgPositionButtonState, setSearchCategoryEditPgPositionButtonState] = React.useState(false);
+
+    let searchCategoryEditPgPosButton = () => {
+      searchCategoryEditPgPosButtonState ? setSearchCategoryEditPgPosButtonState(false) : setSearchCategoryEditPgPosButtonState(true)
+    }
+    let searchCategoryEditPgAvailabilityButton = () => {
+      searchCategoryEditPgAvailabilityButtonState ? setSearchCategoryEditPgAvailabilityButtonState(false) : setSearchCategoryEditPgAvailabilityButtonState(true)
+    }
+    let searchCategoryEditPgPositionButton = () => {
+      searchCategoryEditPgPositionButtonState ? setSearchCategoryEditPgPositionButtonState(false) : setSearchCategoryEditPgPositionButtonState(true)
+    }
+
     if(props.formType === "money")  {
         formState = <div className= {props.formTitle} >
                         <Text fontSize='lg'>{props.formTitle}</Text>
@@ -52,7 +66,7 @@ export default function WdaForm (props: IAppProps) {
 
   if(props.formType === "search-category-edit-pg")  { 
     formState = <div className= {"searchBox"} >
-                  <HStack>
+                  <HStack spacing={0}>
                     <Box w={"100%"}>
                     <InputGroup>
                       <InputLeftElement
@@ -64,24 +78,57 @@ export default function WdaForm (props: IAppProps) {
                       <Input variant='filled' placeholder={props.formPlaceholder} focusBorderColor='lime'/>
                     </InputGroup>
                     </Box>
-                    <Box>
-                      <HStack>
-                        <RiShoppingCart2Line/>
-                        <Text as = 'b'> POS</Text>
-                      </HStack>
-                    </Box>
-                    <Box bg={"black"} color="White" p={2}>
-                      <HStack>
-                        <ViewIcon/>
-                        <Text>Availability</Text>
-                      </HStack>
-                    </Box>
-                    <Box bg={"white"} p={2}>
-                      <HStack>
-                        <GiPointySword/>
-                        <Text>Position</Text>
-                      </HStack>
-                    </Box>
+                    <div onClick={()=>searchCategoryEditPgPosButton()}>
+                      {searchCategoryEditPgPosButtonState ? 
+                      <Box bg={"black"} color = {"white"} p ={2}>
+                        <HStack>
+                          <RiShoppingCart2Line/>
+                          <Text as = 'b'> POS</Text>
+                        </HStack>
+                      </Box>
+                        :
+                        <Box p ={2}>
+                        <HStack>
+                          <RiShoppingCart2Line/>
+                          <Text as = 'b'> POS</Text>
+                        </HStack>
+                        </Box>
+                        }
+                    </div>
+                    <div onClick={() => searchCategoryEditPgAvailabilityButton()}>
+                      {searchCategoryEditPgAvailabilityButtonState ? 
+                      <Box bg={"black"} color="white" p={2}>
+                        <HStack>
+                          <ViewIcon/>
+                          <Text>Availability</Text>
+                        </HStack>
+                      </Box>
+                      :
+                      <Box bg={"white"} color="black" p={2}>
+                        <HStack>
+                          <ViewIcon/>
+                          <Text>Availability</Text>
+                        </HStack>
+                      </Box>
+                      }
+                    </div>
+                    <div onClick={() => searchCategoryEditPgPositionButton()}>
+                      { searchCategoryEditPgPositionButtonState ?
+                        <Box bg={"black"} color={"white"} p={2}>
+                        <HStack>
+                          <GiPointySword/>
+                          <Text>Position</Text>
+                        </HStack>
+                      </Box>
+                      :
+                      <Box bg={"white"} p={2}>
+                        <HStack>
+                          <GiPointySword/>
+                          <Text>Position</Text>
+                        </HStack>
+                      </Box>
+                      }
+                    </div>
                   </HStack>
                 </div>
 }
