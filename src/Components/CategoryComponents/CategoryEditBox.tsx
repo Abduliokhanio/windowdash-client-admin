@@ -15,13 +15,17 @@ export default function CategoryEditBox (props: IAppProps) {
         </Box>
         <Box w='50%' h={"100%"} bg='red.400'>
           <VStack spacing={"1"} align={"left"} h={"100%"}>
-            <Text h={"50%"} as="b" fontSize={"md"}>{faker.lorem.words()}</Text>
-            <Text h={"50%"} fontSize={"xs"} >{faker.lorem.lines()}</Text>
-            <Text h={"50%"} as="b" fontSize={"xs"}>{faker.finance.amount(5, 10, 2, '$')}</Text>
+            <Text noOfLines={1} h={"50%"} as="b" fontSize={"sm"}>{faker.lorem.words(3)}</Text>
+            <Text noOfLines={3} h={"50%"} fontSize={"xs"} >{faker.lorem.lines(12)}</Text>
+            <Text h={"50%"} as="b" fontSize={"xs"} >{faker.finance.amount(5, 10, 2, '$')}</Text>
           </VStack>
         </Box>
         <Box w='50%' h={"100%"} bg='red.400'>
-          <Text>Opts</Text>
+          <VStack spacing={"1"}>
+            <Box bg='green.900' px = {4} py= {2}/>
+            <Box bg='green.900' px = {4} py= {2}/>
+            <Box bg='green.900' px = {4} py= {2}/>
+          </VStack>
         </Box>
         </HStack>
       </GridItem>
