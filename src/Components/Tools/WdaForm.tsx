@@ -83,14 +83,14 @@ export default function WdaForm (props: IAppProps) {
                       <Box bg={"black"} color = {"white"} p ={2}>
                         <HStack>
                           <RiShoppingCart2Line/>
-                          <Text as = 'b'> POS</Text>
+                          <Text as = 'b' style={{userSelect: "none"}}> POS</Text>
                         </HStack>
                       </Box>
                         :
                         <Box p ={2}>
                         <HStack>
                           <RiShoppingCart2Line/>
-                          <Text as = 'b'> POS</Text>
+                          <Text as = 'b' style={{userSelect: "none"}}> POS</Text>
                         </HStack>
                         </Box>
                         }
@@ -100,14 +100,14 @@ export default function WdaForm (props: IAppProps) {
                       <Box bg={"black"} color="white" p={2}>
                         <HStack>
                           <ViewIcon/>
-                          <Text>Availability</Text>
+                          <Text style={{userSelect: "none"}}>Availability</Text>
                         </HStack>
                       </Box>
                       :
                       <Box bg={"white"} color="black" p={2}>
                         <HStack>
                           <ViewIcon/>
-                          <Text>Availability</Text>
+                          <Text style={{userSelect: "none"}}>Availability</Text>
                         </HStack>
                       </Box>
                       }
@@ -117,14 +117,14 @@ export default function WdaForm (props: IAppProps) {
                         <Box bg={"black"} color={"white"} p={2}>
                         <HStack>
                           <GiPointySword/>
-                          <Text>Position</Text>
+                          <Text style={{userSelect: "none"}}>Position</Text>
                         </HStack>
                       </Box>
                       :
                       <Box bg={"white"} p={2}>
                         <HStack>
                           <GiPointySword/>
-                          <Text>Position</Text>
+                          <Text style={{userSelect: "none"}}>Position</Text>
                         </HStack>
                       </Box>
                       }
