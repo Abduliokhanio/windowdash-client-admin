@@ -1,9 +1,8 @@
 import * as React from 'react';
 import Header from '../Components/Header/Header';
-import { Box, Center, HStack, Spacer, Stack, Text, VStack } from '@chakra-ui/react';
+import { Box, Center, HStack, Text, VStack } from '@chakra-ui/react';
 import { ChevronDownIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
-import WdaDivider from '../Components/Tools/WdaDivider';
 import WdaForm from '../Components/Tools/WdaForm';
 
 export interface IAppProps {
