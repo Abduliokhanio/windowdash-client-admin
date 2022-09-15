@@ -1,9 +1,10 @@
 import * as React from 'react';
 import Header from '../Components/Header/Header';
-import { Box, Button, Center, HStack, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Grid, GridItem, HStack, Spacer, Text, VStack } from '@chakra-ui/react';
 import { ChevronDownIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 import WdaForm from '../Components/Tools/WdaForm';
+import CategoryEditBox from '../Components/CategoryComponents/CategoryEditBox';
 
 export interface IAppProps {
 }
@@ -47,7 +48,7 @@ export default function CategoryEditPg (props: IAppProps) {
         </div>
         <WdaForm formType='search-category-edit-pg' formPlaceholder={`Search ${catTitle}`}></WdaForm>
 
-        <div style={{paddingLeft: "10%", paddingTop: "1em"}}>
+        <div style={{paddingLeft: "10%",paddingRight: "10%", paddingTop: "1em"}}>
         <HStack>
             <Box>
                 <Text fontSize='sm'>Filter :</Text>
@@ -62,7 +63,34 @@ export default function CategoryEditPg (props: IAppProps) {
                 <Button fontSize='sm' size='sm'>Hidden</Button>
             </Box>
         </HStack>
+
+        <Flex style={{paddingTop: "1em"}}>
+            <Text fontSize={"xl"} as={"b"}>Breakfast</Text>
+            <Spacer></Spacer>
+            <Box bg={"red"} color={"white"} p={2}>
+                <Text>icon1</Text>
+            </Box>
+            <Box bg={"green"} color={"white"} p={2}>
+                <Text>icon2</Text>
+            </Box>
+        </Flex>
+        <Grid templateColumns='repeat(3, 1fr)' gap={6} style={{paddingTop: "1em"}} >
+            <CategoryEditBox />
+            <GridItem w='100%' h='125' bg='red.500' />
+            <GridItem w='100%' h='125' bg='red.500' />
+            
+            <GridItem w='100%' h='125' bg='red.500' />
+            <GridItem w='100%' h='125' bg='red.500' />
+            <GridItem w='100%' h='125' bg='red.500' />
+            
+            <GridItem w='100%' h='125' bg='red.500' />
+            <GridItem w='100%' h='125' bg='red.500' />
+            <GridItem w='100%' h='125' bg='red.500' />
+        </Grid>
+       
         </div>
+
+        
 
     </div>
   );
