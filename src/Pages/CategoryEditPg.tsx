@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Header from '../Components/Header/Header';
-import { Box, Button, Center, Flex, Grid, GridItem, HStack, Spacer, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Grid, HStack, Spacer, Text, VStack } from '@chakra-ui/react';
 import { ChevronDownIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 import WdaForm from '../Components/Tools/WdaForm';
 import CategoryEditBox from '../Components/CategoryComponents/CategoryEditBox';
+import { faker } from '@faker-js/faker';
 
 export interface IAppProps {
 }
@@ -75,22 +76,19 @@ export default function CategoryEditPg (props: IAppProps) {
             </Box>
         </Flex>
         <Grid templateColumns='repeat(3, 1fr)' gap={6} style={{paddingTop: "1em"}} >
-            <CategoryEditBox />
-            <GridItem w='100%' h='125' bg='red.500' />
-            <GridItem w='100%' h='125' bg='red.500' />
-            
-            <GridItem w='100%' h='125' bg='red.500' />
-            <GridItem w='100%' h='125' bg='red.500' />
-            <GridItem w='100%' h='125' bg='red.500' />
-            
-            <GridItem w='100%' h='125' bg='red.500' />
-            <GridItem w='100%' h='125' bg='red.500' />
-            <GridItem w='100%' h='125' bg='red.500' />
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
         </Grid>
-       
         </div>
 
-        
+        <Spacer p={4}/>
 
     </div>
   );

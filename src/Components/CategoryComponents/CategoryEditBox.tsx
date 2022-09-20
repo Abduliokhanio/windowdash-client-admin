@@ -1,30 +1,52 @@
-import { Box, GridItem, HStack,Image, Text, VStack } from '@chakra-ui/react';
-import { faker } from '@faker-js/faker';
+import { Box, GridItem, HStack,Image, Switch, Text, VStack } from '@chakra-ui/react';
+import { RiShoppingCart2Line } from 'react-icons/ri';
+import { BiAward } from 'react-icons/bi';
 import * as React from 'react';
+import { ViewIcon } from '@chakra-ui/icons';
 
 export interface IAppProps {
+  img : string,
+  imgAlt : string,
+  title : string,
+  description : string,
+  price: string
 }
 
 export default function CategoryEditBox (props: IAppProps) {
   return (
     <div>
-      <GridItem w='100%' h='125' bg='green.400' >
+      <GridItem w='100%' h='125' bg='#f7f7f7' >
         <HStack h="100%">
         <Box w='50%' h="100%" bg='red.400'>
-          <Image h={"100%"} src={faker.image.food()} alt={faker.lorem.words(1)}/>
+          <Image h={"100%"} src={props.img} alt={props.imgAlt}/>
         </Box>
-        <Box w='50%' h={"100%"} bg='red.400'>
+        <Box w='50%' h={"100%"} >
           <VStack spacing={"1"} align={"left"} h={"100%"}>
-            <Text noOfLines={1} h={"50%"} as="b" fontSize={"sm"}>{faker.lorem.words(3)}</Text>
-            <Text noOfLines={3} h={"50%"} fontSize={"xs"} >{faker.lorem.lines(12)}</Text>
-            <Text h={"50%"} as="b" fontSize={"xs"} >{faker.finance.amount(5, 10, 2, '$')}</Text>
+            <Text noOfLines={1} h={"50%"} as="b" fontSize={"sm"}>{props.title}</Text>
+            <Text noOfLines={3} h={"50%"} fontSize={"xs"} >{props.description}</Text>
+            <Text h={"50%"} as="b" fontSize={"xs"} >{props.price}</Text>
           </VStack>
         </Box>
-        <Box w='50%' h={"100%"} bg='red.400'>
+        <Box w='50%' h={"100%"} >
           <VStack spacing={"1"}>
-            <Box bg='green.900' px = {4} py= {2}/>
-            <Box bg='green.900' px = {4} py= {2}/>
-            <Box bg='green.900' px = {4} py= {2}/>
+            <Box px = {4} py= {2}>
+              <HStack>
+                <Switch size='sm' />
+                <RiShoppingCart2Line/>
+              </HStack>
+            </Box>
+            <Box px = {4} py= {2}>
+              <HStack>
+                <Switch size='sm' />
+                <ViewIcon/>
+              </HStack>
+            </Box>
+            <Box px = {4} py= {2}>
+              <HStack>
+                <Switch size='sm' />
+                <BiAward/>
+              </HStack>
+            </Box>
           </VStack>
         </Box>
         </HStack>
