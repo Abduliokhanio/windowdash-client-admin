@@ -76,15 +76,15 @@ export default function CategoryEditPg (props: IAppProps) {
             </Box>
         </Flex>
         <Grid templateColumns='repeat(3, 1fr)' gap={6} style={{paddingTop: "1em"}} >
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
-            <CategoryEditBox img={faker.image.food()} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
+            <CategoryEditBox img={faker.image.food(200,200,true)} imgAlt = {faker.lorem.words(1)} title={faker.lorem.words(3)} description={faker.lorem.lines(12)} price={faker.finance.amount(5, 10, 2, '$')}/>
         </Grid>
         </div>
 
