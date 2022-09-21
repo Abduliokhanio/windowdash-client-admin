@@ -1,7 +1,3 @@
-import { Center, Flex, Spacer, Text } from '@chakra-ui/react';
-import * as React from 'react';
-import { GiPointySword } from 'react-icons/gi';
-import CategoryEditRow from '../Components/CategoryComponents/CategoryEditRow';
 import { faker } from '@faker-js/faker';
 import WdaDivider from '../Components/Tools/WdaDivider';
 import CategoryEditRowTable from '../Components/CategoryComponents/CategoryEditRowTable';

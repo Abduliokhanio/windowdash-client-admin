@@ -1,7 +1,6 @@
 import { Flex, Spacer, Center, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { GiPointySword } from 'react-icons/gi';
-import WdaDivider from '../Tools/WdaDivider';
 import CategoryEditRow from './CategoryEditRow';
 
 export interface IAppProps {
