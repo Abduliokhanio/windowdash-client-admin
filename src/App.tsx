@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import DeliverySettings from './Pages/DeliverySettings';
 import Menu from './Pages/Menu';
 import CategoryEditPg from './Pages/CategoryEditPg';
+import CreateMenuCategory from './Pages/CreateMenuCategory';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
             <Route path="/DeliverySettings" element={ <DeliverySettings />} />
             <Route path="/Menu" element={ <Menu />} />
 
-            <Route path="Menu/Category/:id/edit" element={ <CategoryEditPg />} />
+            <Route path="/Menu/Category/new" element={ <CreateMenuCategory/>} />
+            <Route path="/Menu/Category/:id/edit" element={ <CategoryEditPg />} />
           </Routes>
         </div>
       </BrowserRouter>

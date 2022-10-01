@@ -5,6 +5,7 @@ import * as React from 'react';
 import Header from '../Components/Header/Header'
 import MenuCategory from '../Components/MenuComponents/MenuCategory';
 import WdaForm from '../Components/Tools/WdaForm';
+import { Link } from 'react-router-dom';
 
 export interface IAppProps {
 }
@@ -18,7 +19,7 @@ export default function Menu (props: IAppProps) {
     React.useEffect(() =>{
         const fetchData = async () => {
             const { data, error } = await supabase
-                .from("MenuCategory")
+                .from("category")
                 .select()
                 .order('id', { ascending: true })
             if (data){
@@ -51,6 +52,7 @@ export default function Menu (props: IAppProps) {
         }
         
         <div style = {{paddingLeft:"10%", paddingTop: "1em"}}>
+            <Link to={'Category/new'}>
             <HStack paddingLeft={.5}>
                 <Box  bg={"White"} borderColor='black' borderWidth='1px' >
                     <Center padding={1}>
@@ -63,6 +65,7 @@ export default function Menu (props: IAppProps) {
                     </Center>
                 </Box>
             </HStack>
+            </Link>
         </div>
         
     </div>
